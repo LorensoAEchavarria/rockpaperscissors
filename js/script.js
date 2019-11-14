@@ -6,11 +6,28 @@
 /* global $ */
 $("#shoot").click(function(){
  let input =$("#input").val();
-if (input === "rock" || input === "paper" || input === "scissors") {
+
+ if (input === "rock" ) {
 $("#userChoice").html(`<p> ${input} </p>`);
-}else{
-    ("#result").append("<p>" + "Please put rock,paper, or scissors" + "</p>")
+}else if (input === "paper" ){
+    $("#userChoice").html(`<p> ${input} </p>`);
+}else if(input === "sissors" ) {
+    $("#userChoice").html(`<p> ${input} </p>`);
+}else {
+    alert("Please put rock,paper, or scissors")
 }
+
+var choice = Math.random();
+if (choice < .33){
+    $("#computerChoice").html("scissors");
+}else if (choice < .66){
+    $("#computerChoice").html("paper");
+}else{
+    $("#computerChoice").html("rock");
+}
+
+i
+
 
 });
 
